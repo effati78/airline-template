@@ -1,0 +1,11 @@
+@import url(reset.css);
+@import url(IRANSansWeb.css);
+@import url(base.css);
+
+:root {
+    --mainFont: IRANSansWeb;
+}
+
+* {
+    font-family: var(--mainFont), Tahoma;
+}
