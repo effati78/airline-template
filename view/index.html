@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image" href="/img/favicon.png" />
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
         type="text/css" />
+    <link rel="stylesheet" href="/css/persianDatepicker.css" />
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/layout/header.css">
     <link rel="stylesheet" href="/css/layout/footer.css">
@@ -14,7 +16,7 @@
     <title>آژانس هواپیمایی</title>
 </head>
 
-<body>
+<body onLoad="auth()">
     <!-- Header -->
     <header w3-include-html="/view/layout/header.html" class="-cont-p -bg-dark -text-light"></header>
 
@@ -25,24 +27,26 @@
                 <div class="-form-group">
                     <label for="origin" class="-input -left-0">
                         <span class="-input-title">مبدا <small>(شهر)</small></span>
-                        <input type="text" name="origin" id="origin" placeholder="مبدا را وارد کنید.">
+                        <input autocomplete="off" type="text" name="origin" id="origin"
+                            placeholder="مبدا را وارد کنید.">
                     </label>
                     <label for="goal" class="-input -right-0">
                         <span class="-input-title">مقصد <small>(شهر)</small></span>
-                        <input type="text" name="goal" id="goal" placeholder="مقصد را وارد کنید.">
+                        <input autocomplete="off" type="text" name="goal" id="goal" placeholder="مقصد را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group w-big">
                     <label for="date" class="-input">
                         <span class="-input-title">تاریخ رفت</span>
-                        <input type="text" name="date" id="date" placeholder="تاریخ رفت را وارد کنید.">
+                        <input autocomplete="off" type="text" name="date" id="date"
+                            placeholder="تاریخ رفت را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group w-big">
                     <label for="passengers" class="-input">
                         <span class="-input-title">مسافران</span>
-                        <input type="text" name="passengers" id="passengers" value="یک مسافر" readonly
-                            title="امکان تغییر تعداد مسافران وجود ندارد.">
+                        <input autocomplete="off" type="text" name="passengers" id="passengers" value="یک مسافر"
+                            readonly title="امکان تغییر تعداد مسافران وجود ندارد.">
                     </label>
                 </div>
                 <button type="submit" class="btn-search -btn -btn-warning">
@@ -54,13 +58,13 @@
         <!-- Result -->
         <div class="result -cont-p">
             <div class="result-content">
-                <!-- <div class="dont-exist">
+                <div class="dont-exist">
                     <div class="img"><img src="/img/dont-exist.svg" alt="dont-exist"></div>
                     <div>
                         <h3>شرمنده رفیق</h3>
                         <p>با این مشخصات هیچ پروازی یافت نشد.</p>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="start">
                     <div class="img"><img src="/img/flying.svg" alt="start"></div>
@@ -71,123 +75,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="trips">
-                    <div class="trip">
-                        <div class="img">
-                            <div><img src="/img/airplanes/IR.png" alt="IR"></div>
-                            <p>ایران ایر</p>
-                        </div>
-                        <div class="od">
-                            <div class="od-cities">
-                                <h3>تهران</h3>
-                                <span class="line"></span>
-                                <h3>بیرجند</h3>
-                            </div>
-
-                            <div class="clock">
-                                <i class="fad fa-clock"></i>
-                                <p><span>ساعت پرواز</span><strong>22:00</strong></p>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p class="-w-100 -center price"><strong>9,850,000</strong> تومان</p>
-                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
-                            <small class="-w-100 -text-danger -center">9 صندلی باقی مانده</small>
-                        </div>
-                    </div>
-                    <div class="trip">
-                        <div class="img">
-                            <div><img src="/img/airplanes/EP.png" alt="EP"></div>
-                            <p>آسمان</p>
-                        </div>
-                        <div class="od">
-                            <div class="od-cities">
-                                <h3>تهران</h3>
-                                <span class="line"></span>
-                                <h3>بیرجند</h3>
-                            </div>
-
-                            <div class="clock">
-                                <i class="fad fa-clock"></i>
-                                <p><span>ساعت پرواز</span><strong>04:00</strong></p>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p class="-w-100 -center price"><strong>7,800,000</strong> تومان</p>
-                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
-                            <small class="-w-100 -text-danger -center">1 صندلی باقی مانده</small>
-                        </div>
-                    </div>
-                    <div class="trip">
-                        <div class="img">
-                            <div><img src="/img/airplanes/I3.png" alt="I3"></div>
-                            <p>آتا</p>
-                        </div>
-                        <div class="od">
-                            <div class="od-cities">
-                                <h3>تهران</h3>
-                                <span class="line"></span>
-                                <h3>بیرجند</h3>
-                            </div>
-
-                            <div class="clock">
-                                <i class="fad fa-clock"></i>
-                                <p><span>ساعت پرواز</span><strong>20:30</strong></p>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p class="-w-100 -center price"><strong>9,005,000</strong> تومان</p>
-                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
-                            <small class="-w-100 -text-danger -center">6 صندلی باقی مانده</small>
-                        </div>
-                    </div>
-                    <div class="trip">
-                        <div class="img">
-                            <div><img src="/img/airplanes/SR.png" alt="SR"></div>
-                            <p>سپهران</p>
-                        </div>
-                        <div class="od">
-                            <div class="od-cities">
-                                <h3>تهران</h3>
-                                <span class="line"></span>
-                                <h3>بیرجند</h3>
-                            </div>
-
-                            <div class="clock">
-                                <i class="fad fa-clock"></i>
-                                <p><span>ساعت پرواز</span><strong>22:00</strong></p>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p class="-w-100 -center price"><strong>3,850,000</strong> تومان</p>
-                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
-                            <small class="-w-100 -text-danger -center">5 صندلی باقی مانده</small>
-                        </div>
-                    </div>
-                    <div class="trip">
-                        <div class="img">
-                            <div><img src="/img/airplanes/W5.png" alt="W5"></div>
-                            <p>ماهان</p>
-                        </div>
-                        <div class="od">
-                            <div class="od-cities">
-                                <h3>تهران</h3>
-                                <span class="line"></span>
-                                <h3>بیرجند</h3>
-                            </div>
-
-                            <div class="clock">
-                                <i class="fad fa-clock"></i>
-                                <p><span>ساعت پرواز</span><strong>22:00</strong></p>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <p class="-w-100 -center price"><strong>9,850,000</strong> تومان</p>
-                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
-                            <small class="-w-100 -text-danger -center">9 صندلی باقی مانده</small>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="trips"></div>
             </div>
         </div>
 
@@ -199,7 +87,12 @@
     </main>
 
     <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/persianDatepicker.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

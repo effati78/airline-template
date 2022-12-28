@@ -28,30 +28,3 @@ function includeHTML() {
 }
 
 includeHTML();
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    // Modal
-    var modal = document.querySelector(".modal");
-    var showModal = document.querySelector(".showModal");
-    var closeModal = document.querySelector(".closeModal");
-    console.log(showModal);
-    console.log(modal);
-    console.log(closeModal);
-
-    showModal.onclick = function (e) {
-        e.preventDefault();
-        console.log("hello");
-        modal.style.display = "block";
-    };
-
-    closeModal.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-        console.log(event.target);
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-});

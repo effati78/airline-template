@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image" href="/img/favicon.png" />
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" href="/css/main.css">
@@ -14,7 +15,7 @@
     <title>انتخاب بلیط</title>
 </head>
 
-<body>
+<body onLoad="auth()">
     <!-- Header -->
     <header w3-include-html="/view/layout/header.html" class="-cont-p -bg-dark -text-light"></header>
 
@@ -324,46 +325,52 @@
         <div id="payment" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span><i class="close fas fa-times"></i></span>
+                    <span id="closePaymentModal"><i class="close fas fa-times"></i></span>
                     <h3 class="-right">نهایی کردن خرید</h3>
                 </div>
                 <div class="modal-body">
                     <div class="register">
-                        <form action="#" class="login-form">
+                        <form id="paymentForm" action="#" class="payment-form">
                             <div class="-form-group">
                                 <label for="origin" class="-input -left-0">
                                     <span class="-input-title">مبدا <small>(شهر)</small></span>
-                                    <input readonly type="text" name="origin" id="origin" placeholder="مبدا را وارد کنید." value="تهران">
+                                    <input autocomplete="off" readonly type="text" name="origin" id="origin"
+                                        placeholder="مبدا را وارد کنید." value="تهران">
                                 </label>
                                 <label for="goal" class="-input -right-0">
                                     <span class="-input-title">مقصد <small>(شهر)</small></span>
-                                    <input readonly type="text" name="goal" id="goal" placeholder="مقصد را وارد کنید." value="بیرجند">
+                                    <input autocomplete="off" readonly type="text" name="goal" id="goal"
+                                        placeholder="مقصد را وارد کنید." value="بیرجند">
                                 </label>
                             </div>
                             <div class="-form-group">
                                 <label for="date" class="-input -left-0">
                                     <span class="-input-title">تاریخ پرواز</span>
-                                    <input readonly type="text" name="date" id="date" value="1401/11/28">
+                                    <input autocomplete="off" readonly type="text" name="date" id="date"
+                                        value="1401/11/28">
                                 </label>
                                 <label for="price" class="-input -right-0">
                                     <span class="-input-title">قیمت <small>(تومان)</small></span>
-                                    <input readonly type="text" name="price" id="price" value="9,850,000">
+                                    <input autocomplete="off" readonly type="text" name="price" id="price"
+                                        value="9,850,000">
                                 </label>
                             </div>
                             <div class="-form-group">
                                 <label for="fname" class="-input -left-0">
                                     <span class="-input-title">نام</span>
-                                    <input type="text" name="fname" id="fname" placeholder="نام خود را وارد کنید.">
+                                    <input autocomplete="off" type="text" name="fname" id="fname"
+                                        placeholder="نام خود را وارد کنید.">
                                 </label>
                                 <label for="lname" class="-input -right-0">
                                     <span class="-input-title">نام خانوادگی</span>
-                                    <input type="text" name="lname" id="lname" placeholder="نام خانوادگی خود را وارد کنید.">
+                                    <input autocomplete="off" type="text" name="lname" id="lname"
+                                        placeholder="نام خانوادگی خود را وارد کنید.">
                                 </label>
                             </div>
                             <div class="-form-group -w-100">
                                 <label for="nationalCode" class="-input -w-100">
                                     <span class="-input-title">کدملی</span>
-                                    <input type="text" name="nationalCode" id="nationalCode"
+                                    <input autocomplete="off" type="text" name="nationalCode" id="nationalCode"
                                         placeholder="کدملی خود را وارد کنید.">
                                 </label>
                             </div>
@@ -382,7 +389,10 @@
     </main>
 
     <!-- JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/seat-selection.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,4 @@
-if (window.SCRIPT_IS_DYNAMICALLY_LOADED) {
-    domContentLoadedListener();
-} else {
-    document.addEventListener(
-        "DOMContentLoaded",
-        domContentLoadedListener,
-        false
-    );
-}
-
-function domContentLoadedListener() {
+function date() {
     let hour = document.querySelector(".hour");
     let minutes = document.querySelector(".minutes");
     let seconds = document.querySelector(".seconds");
@@ -41,4 +31,4 @@ function domContentLoadedListener() {
     dateElement.innerHTML = new Intl.DateTimeFormat("fa-IR", option).format(
         now
     );
-}
+};

@@ -1,62 +1,66 @@
 <!-- Modal -->
 <div class="modal-content">
     <div class="modal-header">
-        <span><i class="close fas fa-times"></i></span>
+        <span id="closeAuthModal"><i class="close fas fa-times"></i></span>
     </div>
-    <div class="modal-body">
-        <!-- <div class="login">
+    <div class="modal-body auth-modal-container">
+        <div class="loginBox">
             <h2 class="-center">ورود با کلمه عبور</h2>
-            <p class="-center des">شماره موبایل و همراه کلمه عبور خود را وارد کنید.</p>
-            
+            <p class="-center des">شماره موبایل و کلمه عبور خود را وارد کنید.</p>
+
             <form action="#" class="login-form">
                 <div class="-form-group -w-100">
                     <label for="mobile" class="-input -w-100">
                         <span class="-input-title">شماره موبایل</span>
-                        <input type="text" name="mobile" id="mobile" placeholder="شماره موبایل خود را وارد کنید.">
+                        <input autocomplete="off" type="text" name="mobile" id="mobile"
+                            placeholder="شماره موبایل خود را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group -w-100">
                     <label for="password" class="-input -w-100">
                         <span class="-input-title">کلمه عبور</span>
-                        <input type="password" name="password" id="password" placeholder="کلمه عبور خود را وارد کنید.">
+                        <input autocomplete="off" type="password" name="password" id="password"
+                            placeholder="کلمه عبور خود را وارد کنید.">
                     </label>
                 </div>
                 <button type="submit" class="-btn -btn-warning -w-100">ورود به حساب</button>
                 <div class="register">
                     <span>حساب کاربری ندارید؟</span>
-                    <a href="javascript:void(0)">ثبت نام در سایت</a>
+                    <a href="javascript:void(0)" id="btnRegister">ثبت نام در سایت</a>
                 </div>
             </form>
-        </div> -->
+        </div>
 
-        <div class="register">
+        <div class="registerBox">
             <h2 class="-center">ثبت نام در سایت</h2>
-            <p class="-center des">شماره موبایل و همراه کلمه عبور خود را وارد کنید.</p>
+            <p class="-center des">شماره موبایل و کلمه عبور خود را وارد کنید.</p>
 
             <form action="#" class="login-form">
                 <div class="-form-group -w-100">
                     <label for="mobile" class="-input -w-100">
                         <span class="-input-title">شماره موبایل</span>
-                        <input type="text" name="mobile" id="mobile" placeholder="شماره موبایل خود را وارد کنید.">
+                        <input autocomplete="off" type="text" name="mobile" id="mobile"
+                            placeholder="شماره موبایل خود را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group -w-100">
                     <label for="regPassword" class="-input -w-100">
                         <span class="-input-title">کلمه عبور</span>
-                        <input type="password" name="password" id="regPassword" placeholder="کلمه عبور خود را وارد کنید.">
+                        <input autocomplete="off" type="password" name="password" id="regPassword"
+                            placeholder="کلمه عبور خود را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group -w-100">
                     <label for="regPassword2" class="-input -w-100">
                         <span class="-input-title">تاییدیه کلمه عبور</span>
-                        <input type="password" name="password" id="regPassword2"
+                        <input autocomplete="off" type="password" name="password" id="regPassword2"
                             placeholder="کلمه عبور خود را دوباره وارد کنید.">
                     </label>
                 </div>
                 <button type="submit" class="-btn -btn-warning -w-100">ثبت نام</button>
                 <div class="register">
                     <span>حساب کاربری دارید؟</span>
-                    <a href="javascript:void(0)">ورود به حساب</a>
+                    <a href="javascript:void(0)" id="btnLogin">ورود به حساب</a>
                 </div>
             </form>
         </div>

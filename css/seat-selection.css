@@ -209,7 +209,7 @@ main {
     transition: all 0.6s;
 }
 
-.small-rows .chair:hover, .small-rows .chair:active {
+.small-rows .chair:hover, .small-rows .chair.active {
     background-color: var(--success);
 }
 
@@ -232,8 +232,4 @@ main {
 
 label {
     width: 50%;
-}
-
-#payment {
-    display: block;
 }

@@ -83,7 +83,7 @@ main {
 }
 
 .result-content .dont-exist {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -231,4 +231,10 @@ main {
     border-radius: 50px;
     display: inline-block;
     object-fit: contain;
+}
+
+/* datePicker */
+.pdp-header, .pdp-footer {
+    cursor: pointer;
+    height: 25px !important;
 }
