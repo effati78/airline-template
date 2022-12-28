@@ -1,0 +1,16 @@
+table a {
+    color: var(--dark);
+    transition: all 0.6s;
+}
+
+table tr:hover a {
+    color: var(--light);
+}
+
+table i {
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    right: 2px;
+    font-size: 1.4rem;
+}
