@@ -1,0 +1,158 @@
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--white);
+    box-shadow: 2px 2px 2px #00000008;
+}
+
+header div.header-content {
+    min-width: 80%;
+    max-width: 80%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.header-content-date,
+.header-content-time {
+    padding: 2px 10px;
+    border-radius: 50px;
+}
+
+.header-content-date i,
+.header-content-time i {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+.header-content-time span {
+    width: 18px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.sidebar {
+    box-shadow: -5px 0 5px #0000000e;
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 20%;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    min-height: 60px;
+    max-height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.sidebar hr {
+    width: 90%;
+    margin: 5px auto;
+    border-top: unset;
+    border-right: unset;
+    border-left: unset;
+    border-bottom: 0.5px solid #f8f9fa2f;
+}
+
+.sidebar .info {
+    padding: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.sidebar .info .info-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    border: 2px solid var(--warning);
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.sidebar .info .info-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: inline-block;
+    object-fit: cover;
+}
+
+.sidebar .badge {
+    border-radius: 5px;
+    padding: 0 2px;
+}
+
+.sidebar ul,
+.sidebar li {
+    /* list-style: disc; */
+    color: var(--dark);
+}
+
+.sidebar ul {
+    padding: 20px 10px;
+    height: 100%;
+}
+
+.sidebar a {
+    margin: 0 0 5px 0;
+    border-radius: 5px;
+    color: var(--light);
+    background-color: var(--dark);
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 10px;
+    transition: all 0.6s;
+}
+
+.sidebar a:hover {
+    background-color: #f8f9fa52;
+}
+
+.sidebar a.active {
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.sidebar a span {
+    font-size: 1.7rem;
+    margin-left: 3px;
+    width: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+main {
+    background-color: var(--light);
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 100vh;
+    margin-right: auto;
+    padding: 20px 30px;
+}
