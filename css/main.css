@@ -1,6 +1,6 @@
-@import url(reset.css);
-@import url(IRANSansWeb.css);
-@import url(base.css);
+@import url(/css/base/reset.css);
+@import url(/css/base/IRANSansWeb.css);
+@import url(/css/base/base.css);
 
 :root {
     --mainFont: IRANSansWeb;
@@ -8,4 +8,48 @@
 
 * {
     font-family: var(--mainFont), Tahoma;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--warning);
+}
+
+/* Sweet_Alert_2 */
+.swal2-icon {
+    font-size: 1.5rem;
+}
+
+.swal2-title {
+    font-size: 2rem !important;
+}
+
+.swal2-content, .swal2-html-container {
+    font-size: 1.4rem !important;
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.swal2-content * {
+    direction: rtl !important;
+    text-align: center !important;
+}
+
+.swal2-actions button {
+    font-size: 1.4rem !important;
+}
+
+.swal2-popup {
+    max-width: 100% !important;
 }

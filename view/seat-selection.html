@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
@@ -8,51 +8,75 @@
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/adminPanel/layout.css">
-    <link rel="stylesheet" href="/css/adminPanel/admin/trip.css">
-    <title>شرکت هواپیمایی ایران ایر | پنل مدیریت</title>
+    <link rel="stylesheet" href="/css/layout/header.css">
+    <link rel="stylesheet" href="/css/layout/footer.css">
+    <link rel="stylesheet" href="/css/layout/auth.css">
+    <link rel="stylesheet" href="/css/seat-selection.css">
+    <title>انتخاب بلیط</title>
 </head>
 
-<body onLoad="date()">
+<body onLoad="auth()">
     <!-- Header -->
-    <header w3-include-html="/view/adminPanel/layout/header.html"></header>
-    <div class="content">
-        <!-- aside -->
-        <aside w3-include-html="/view/adminPanel/layout/asideAdmin.html" class="sidebar -bg-dark"></aside>
+    <header w3-include-html="/view/layout/header.html" class="-cont-p -bg-dark -text-light"></header>
 
-        <!-- main -->
-        <main>
-            <div class="-card">
-                <div class="-card-header">
-                    <h3 class="-card-title">شرکت هواپیمایی ایران ایر</h3>
-                </div>
+    <!-- Main -->
+    <main>
+        <!-- Result -->
+        <div class="result -cont-p">
+            <div class="result-content">
+                <div class="trips">
+                    <div class="trip">
+                        <div class="img">
+                            <div><img src="/img/airplanes/IR.png" alt="IR"></div>
+                            <p>ایران ایر</p>
+                        </div>
+                        <div class="od">
+                            <div class="od-cities">
+                                <h3>تهران</h3>
+                                <span class="line"></span>
+                                <h3>بیرجند</h3>
+                            </div>
 
-                <div class="-card-body">
-                    <div class="-table-responsive">
+                            <div class="clock">
+                                <i class="fad fa-clock"></i>
+                                <p><span>ساعت پرواز</span><strong>22:00</strong></p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p class="-w-100 -center price"><strong>9,850,000</strong> تومان</p>
+                            <a href="#" class="-w-100 -btn -btn-warning">انتخاب پرواز</a>
+                            <small class="-w-100 -text-danger -center">9 صندلی باقی مانده</small>
+                        </div>
+                    </div>
+                    <div class="trip p-20">
                         <table class="-table -table-hover">
                             <tbody>
                                 <tr>
                                     <th>شماره پرواز</th>
-                                    <th>ظرفیت خالی</th>
-                                    <th>تاریخ پرواز</th>
                                     <th>مبدا</th>
                                     <th>مقصد</th>
+                                    <th>تاریخ پرواز</th>
                                     <th>ساعت پرواز</th>
-                                    <th>مبلغ <small>(تومان)</small></th>
                                 </tr>
                                 <tr>
                                     <td>778</td>
-                                    <td>55 صندلی</td>
-                                    <td>1401/11/28</td>
                                     <td>تهران</td>
                                     <td>بیرجند</td>
+                                    <td>1401/11/28</td>
                                     <td>22:00</td>
-                                    <td>750,000</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="result -cont-p mt-20">
+            <div class="result-content">
+                <h3>انتخاب صندلی</h3>
+                <p class="des">لطفا شماره صندلی خود را انتخاب کنید. با کلیک بر روی صندلی آن را به راحتی رزرو کنید.</p>
+                <div class="trips">
                     <div class="airplane-simulator -ltr">
                         <div class="rows grid-item-1">
                             <div class="small-rows">
@@ -295,60 +319,80 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="-card -mt-40">
-                <div class="-card-header">
-                    <h3 class="-card-title">مشخصات مسافرین</h3>
+        <!-- Modal -->
+        <div id="payment" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span id="closePaymentModal"><i class="close fas fa-times"></i></span>
+                    <h3 class="-right">نهایی کردن خرید</h3>
                 </div>
-
-                <div class="-card-body -table-responsive">
-                    <table class="-table -table-hover">
-                        <tbody>
-                            <tr>
-                                <th>ردیف</th>
-                                <th>نام</th>
-                                <th>نام خانوادگی</th>
-                                <th>کدملی</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>رضا</td>
-                                <td>عفتی مقدم</td>
-                                <td>0640988524</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>حجت</td>
-                                <td>قاسمی</td>
-                                <td>0540843256</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>مهدی</td>
-                                <td>مجاهد</td>
-                                <td>0410250458</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>سارا</td>
-                                <td>کریمی</td>
-                                <td>0659852478</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>الناز</td>
-                                <td>جعفری نژاد</td>
-                                <td>0983658745</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modal-body">
+                    <div class="register">
+                        <form id="paymentForm" action="#" class="payment-form">
+                            <div class="-form-group">
+                                <label for="origin" class="-input -left-0">
+                                    <span class="-input-title">مبدا <small>(شهر)</small></span>
+                                    <input autocomplete="off" readonly type="text" name="origin" id="origin"
+                                        placeholder="مبدا را وارد کنید." value="تهران">
+                                </label>
+                                <label for="goal" class="-input -right-0">
+                                    <span class="-input-title">مقصد <small>(شهر)</small></span>
+                                    <input autocomplete="off" readonly type="text" name="goal" id="goal"
+                                        placeholder="مقصد را وارد کنید." value="بیرجند">
+                                </label>
+                            </div>
+                            <div class="-form-group">
+                                <label for="date" class="-input -left-0">
+                                    <span class="-input-title">تاریخ پرواز</span>
+                                    <input autocomplete="off" readonly type="text" name="date" id="date"
+                                        value="1401/11/28">
+                                </label>
+                                <label for="price" class="-input -right-0">
+                                    <span class="-input-title">قیمت <small>(تومان)</small></span>
+                                    <input autocomplete="off" readonly type="text" name="price" id="price"
+                                        value="9,850,000">
+                                </label>
+                            </div>
+                            <div class="-form-group">
+                                <label for="fname" class="-input -left-0">
+                                    <span class="-input-title">نام</span>
+                                    <input autocomplete="off" type="text" name="fname" id="fname"
+                                        placeholder="نام خود را وارد کنید.">
+                                </label>
+                                <label for="lname" class="-input -right-0">
+                                    <span class="-input-title">نام خانوادگی</span>
+                                    <input autocomplete="off" type="text" name="lname" id="lname"
+                                        placeholder="نام خانوادگی خود را وارد کنید.">
+                                </label>
+                            </div>
+                            <div class="-form-group -w-100">
+                                <label for="nationalCode" class="-input -w-100">
+                                    <span class="-input-title">کدملی</span>
+                                    <input autocomplete="off" type="text" name="nationalCode" id="nationalCode"
+                                        placeholder="کدملی خود را وارد کنید.">
+                                </label>
+                            </div>
+                            <button type="submit" class="-btn -btn-success -w-100">خرید بلیط</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
 
+        <!-- Auth -->
+        <div w3-include-html="/view/layout/auth.html" id="auth" class="modal"></div>
+
+        <!-- Footer -->
+        <footer class="-cont-p" w3-include-html="/view/layout/footer.html"></footer>
+    </main>
+
+    <!-- JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/adminPanel/layout.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/seat-selection.js"></script>
 </body>
 
 </html>

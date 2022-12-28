@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image" href="/img/favicon.png" />
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
         type="text/css" />
+    <link rel="stylesheet" href="/css/persianDatepicker.css" />
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/layout/header.css">
+    <link rel="stylesheet" href="/css/layout/footer.css">
+    <link rel="stylesheet" href="/css/layout/auth.css">
     <link rel="stylesheet" href="/css/index.css">
     <title>آژانس هواپیمایی</title>
 </head>
 
-<body>
+<body onLoad="auth()">
     <!-- Header -->
-    <header w3-include-html="header.html" class="-cont-p -bg-dark -text-light"></header>
+    <header w3-include-html="/view/layout/header.html" class="-cont-p -bg-dark -text-light"></header>
 
     <!-- Main -->
     <main>
@@ -24,24 +27,26 @@
                 <div class="-form-group">
                     <label for="origin" class="-input -left-0">
                         <span class="-input-title">مبدا <small>(شهر)</small></span>
-                        <input type="text" name="origin" id="origin" placeholder="مبدا را وارد کنید.">
+                        <input autocomplete="off" type="text" name="origin" id="origin"
+                            placeholder="مبدا را وارد کنید.">
                     </label>
                     <label for="goal" class="-input -right-0">
                         <span class="-input-title">مقصد <small>(شهر)</small></span>
-                        <input type="text" name="goal" id="goal" placeholder="مقصد را وارد کنید.">
+                        <input autocomplete="off" type="text" name="goal" id="goal" placeholder="مقصد را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group w-big">
                     <label for="date" class="-input">
                         <span class="-input-title">تاریخ رفت</span>
-                        <input type="text" name="date" id="date" placeholder="تاریخ رفت را وارد کنید.">
+                        <input autocomplete="off" type="text" name="date" id="date"
+                            placeholder="تاریخ رفت را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group w-big">
                     <label for="passengers" class="-input">
                         <span class="-input-title">مسافران</span>
-                        <input type="text" name="passengers" id="passengers" value="یک مسافر" readonly
-                            title="امکان تغییر تعداد مسافران وجود ندارد.">
+                        <input autocomplete="off" type="text" name="passengers" id="passengers" value="یک مسافر"
+                            readonly title="امکان تغییر تعداد مسافران وجود ندارد.">
                     </label>
                 </div>
                 <button type="submit" class="btn-search -btn -btn-warning">
@@ -53,30 +58,41 @@
         <!-- Result -->
         <div class="result -cont-p">
             <div class="result-content">
-                <!-- <div class="dont-exist">
+                <div class="dont-exist">
                     <div class="img"><img src="/img/dont-exist.svg" alt="dont-exist"></div>
                     <div>
                         <h3>شرمنده رفیق</h3>
                         <p>با این مشخصات هیچ پروازی یافت نشد.</p>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="start">
                     <div class="img"><img src="/img/flying.svg" alt="start"></div>
                     <div>
                         <h3>با آژانس هواپیمایی سفری لذت بخش را تجربه کنید.</h3>
-                        <p>از قسمت بالا اطلاعات سفر خود را وارد کنید و از میان هزاران شرکت هواپیمایی معتبر بلیط خود را خریداری کنید.</p>
+                        <p>از قسمت بالا اطلاعات سفر خود را وارد کنید و از میان هزاران شرکت هواپیمایی معتبر بلیط خود را
+                            خریداری کنید.</p>
                     </div>
                 </div>
+
+                <div class="trips"></div>
             </div>
         </div>
 
+        <!-- Auth -->
+        <div w3-include-html="/view/layout/auth.html" id="auth" class="modal"></div>
+
         <!-- Footer -->
-        <footer class="-cont-p" w3-include-html="footer.html"></footer>
+        <footer class="-cont-p" w3-include-html="/view/layout/footer.html"></footer>
     </main>
 
     <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/persianDatepicker.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
