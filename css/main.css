@@ -1,6 +1,6 @@
-@import url(reset.css);
-@import url(IRANSansWeb.css);
-@import url(base.css);
+@import url(/css/base/reset.css);
+@import url(/css/base/IRANSansWeb.css);
+@import url(/css/base/base.css);
 
 :root {
     --mainFont: IRANSansWeb;
@@ -8,4 +8,20 @@
 
 * {
     font-family: var(--mainFont), Tahoma;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--warning);
 }

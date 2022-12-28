@@ -1,52 +1,11 @@
-.search {
-    position: absolute;
-    bottom: -85px;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    padding: 50px;
-    border-radius: 8px;
-    background-color: var(--white);
-    backdrop-filter: blur(4px);
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
-}
-
-.background {
-    position: relative;
-    height: 400px;
-    background-image: url("/img/anime.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.search label {
-    width: 100%;
-    display: inline-block;
-}
-
-.search .btn-search {
-    width: 15%;
-    padding: 12px 15px;
-    border-radius: 8px;
-    font-size: 1.5rem;
-}
-
-.w-big {
-    width: 21.5%;
-}
-
 main {
     background-color: #F6F6F6;
     min-height: 100vh;
+    padding-top: 50px;
 }
 
 .result {
     width: 100%;
-    margin-top: 105px;
 }
 
 .result-content {
@@ -56,69 +15,19 @@ main {
     border-radius: 8px;
 }
 
-.result-content .start .img {
-    min-width: 200px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.result-content .dont-exist .img {
-    min-width: 150px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.result-content .img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: inline-block;
-    object-fit: contain;
-}
-
-.result-content .dont-exist {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.result-content .dont-exist h3 {
-    margin-bottom: 5px;
-    font-size: 1.9rem;
-}
-
-.result-content .start {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.result-content .start h3 {
-    margin-bottom: 8px;
-    font-size: 2rem;
-}
-
-.result-content .start p {
-    font-size: 1.5rem;
+.p-20 {
+    padding: 20px !important;
 }
 
 .trips {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2%;
 }
 
 .trip {
-    margin-bottom: 2%;
     border: 1px solid #e5e5e5;
     box-shadow: 0 1px 2px #9e9e9e23;
     border-radius: 8px;
@@ -231,4 +140,100 @@ main {
     border-radius: 50px;
     display: inline-block;
     object-fit: contain;
+}
+
+.-mt-40 {
+    margin-top: 35px;
+}
+
+.airplane-simulator {
+    padding: 44px 155px 40px 230px;
+    width: 100%;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/img/airplane-simulator.webp");
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-item-1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-item-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-item-3 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-item-4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.rows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    direction: ltr;
+}
+
+.small-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.small-rows .chair {
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.98rem;
+    width: 23px;
+    height: 17px;
+    background-color: var(--secondary);
+    display: inline-block;
+    text-align: center;
+    line-height: 17px;
+    color: var(--light);
+    transition: all 0.6s;
+}
+
+.small-rows .chair:hover, .small-rows .chair:active {
+    background-color: var(--success);
+}
+
+.small-rows .chair.blocked {
+    background-color: var(--warning);
+    color: var(--dark);
+}
+
+.small-rows .chair.reserved {
+    background-color: var(--danger);
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.des {
+    margin: 8px 0 25px 0;
+}
+
+label {
+    width: 50%;
+}
+
+#payment {
+    display: block;
 }

@@ -29,23 +29,18 @@ function includeHTML() {
 
 includeHTML();
 
-if (window.SCRIPT_IS_DYNAMICALLY_LOADED) {
-    domContentLoadedListener();
-} else {
-    document.addEventListener(
-        "DOMContentLoaded",
-        domContentLoadedListener,
-        false
-    );
-}
-
-function domContentLoadedListener() {
+document.addEventListener("DOMContentLoaded", (event) => {
     // Modal
     var modal = document.querySelector(".modal");
     var showModal = document.querySelector(".showModal");
     var closeModal = document.querySelector(".closeModal");
+    console.log(showModal);
+    console.log(modal);
+    console.log(closeModal);
 
-    showModal.onclick = function () {
+    showModal.onclick = function (e) {
+        e.preventDefault();
+        console.log("hello");
         modal.style.display = "block";
     };
 
@@ -59,4 +54,4 @@ function domContentLoadedListener() {
             modal.style.display = "none";
         }
     };
-}
+});
