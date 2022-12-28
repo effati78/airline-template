@@ -8,7 +8,7 @@
     height: 190px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("../../../img/airplane-simulator.webp");
+    background-image: url("/img/airplane-simulator.webp");
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
