@@ -19,12 +19,26 @@ main {
     padding: 20px !important;
 }
 
+table.-table {
+    margin-bottom: 0;
+}
+
 .trips {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2%;
+}
+
+.capacity-label {
+    background-color: var(--danger);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 50px;
+    margin-top: 6px;
+    width: 90%;
+    display: inline;
 }
 
 .trip {
@@ -124,6 +138,7 @@ main {
 }
 
 .trip .info {
+    height: 100%;
     padding: 20px 20px 20px 0;
     border-right: 1px solid #e5e5e5;
     display: flex;
