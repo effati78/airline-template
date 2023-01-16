@@ -55,7 +55,7 @@
     font-size: 0.98rem;
     width: 20px;
     height: 15px;
-    background-color: var(--success);
+    background-color: var(--secondary);
     display: inline-block;
     text-align: center;
     line-height: 15px;
