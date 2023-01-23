@@ -20,8 +20,8 @@ function auth() {
     };
 
     let login = document.querySelector(".login-form");
-    let mobile = document.querySelector("#mobile");
-    let password = document.querySelector("#password");
+    let mobile = document.querySelector("#phoneLogin");
+    let password = document.querySelector("#passwordLogin");
     let regex = new RegExp("^(\\+98|0)?9\\d{9}$");
 
     login.addEventListener("submit", function (e) {
@@ -42,6 +42,21 @@ function auth() {
         } else {
             password.parentElement.classList.remove("danger");
         }
+
+        console.log(password.value);
+        console.log(mobile.value);
+        fetch(`http://127.0.0.1:8080/user?phone=${mobile.value}&password=${password.value}`)
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("error!");
+                }
+            })
+            .then(function (obj) {
+                console.log(obj.name);
+            })
+            .catch((error) => console.log(error));
 
         if (mobile.value == "09156666794" && password.value == "admin") {
             window.open(
