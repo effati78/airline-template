@@ -35,25 +35,37 @@
             <h2 class="-center">ثبت نام در سایت</h2>
             <p class="-center des">شماره موبایل و کلمه عبور خود را وارد کنید.</p>
 
-            <form action="#" class="login-form">
+            <form action="#" class="register-form">
+                <div class="-form-group -w-100">
+                    <label for="fname" class="-input -left-0 -w-50">
+                        <span class="-input-title">نام</span>
+                        <input autocomplete="off" type="text" name="name" id="nameRegister"
+                            placeholder="نام خود را وارد کنید.">
+                    </label>
+                    <label for="lname" class="-input -right-0 -w-50">
+                        <span class="-input-title">نام خانوادگی</span>
+                        <input autocomplete="off" type="text" name="family" id="familyRegister"
+                            placeholder="نام خانوادگی خود را وارد کنید.">
+                    </label>
+                </div>
                 <div class="-form-group -w-100">
                     <label for="mobile" class="-input -w-100">
                         <span class="-input-title">شماره موبایل</span>
-                        <input autocomplete="off" type="text" name="mobile" id="mobile"
+                        <input autocomplete="off" type="text" name="phone" id="phoneRegister"
                             placeholder="شماره موبایل خود را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group -w-100">
                     <label for="regPassword" class="-input -w-100">
                         <span class="-input-title">کلمه عبور</span>
-                        <input autocomplete="off" type="password" name="password" id="regPassword"
+                        <input autocomplete="off" type="password" name="password" id="passwordRegister"
                             placeholder="کلمه عبور خود را وارد کنید.">
                     </label>
                 </div>
                 <div class="-form-group -w-100">
                     <label for="regPassword2" class="-input -w-100">
                         <span class="-input-title">تاییدیه کلمه عبور</span>
-                        <input autocomplete="off" type="password" name="password" id="regPassword2"
+                        <input autocomplete="off" type="password" name="password" id="password2Register"
                             placeholder="کلمه عبور خود را دوباره وارد کنید.">
                     </label>
                 </div>

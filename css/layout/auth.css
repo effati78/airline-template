@@ -97,6 +97,21 @@
     font-size: 1.5rem;
 }
 
+.register-form, .payment-form {
+    padding: 0 80px;
+}
+
+.register-form .-form-group, .payment-form .-form-group {
+    margin-top: 25px;
+}
+
+.register-form button, .payment-form button {
+    margin-top: 25px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
+
 .registerBox {
     display: none;
 }
